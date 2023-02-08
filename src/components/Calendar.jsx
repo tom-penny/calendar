@@ -11,9 +11,11 @@ const times = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "1
 const initSlots = () => {
     const slots = {}
 
+    // Populate day properties
     for (let i = 0; i < days.length; i++) {
         slots[days[i]] = {}
 
+        // Populate time properties
         for (let j = 0; j < times.length; j++) {
             slots[days[i]][times[j]] = {}
         }
@@ -40,6 +42,6 @@ export const Calendar = () => {
 
     return <div className='calendar'>
         <Grid slots={slots}/>
-        <Form/>
+        <Form addEvent={addEvent}/>
     </div>
 }

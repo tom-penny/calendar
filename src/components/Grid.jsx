@@ -7,8 +7,10 @@ export const Grid = ({slots}) => {
     const createCells = () =>
     {
         return Object.keys(slots).map((date) => {
+
             return Object.keys(slots[date]).map((time) => {
                 const dateTime = `${date} ${time}`
+
                 return <div className='grid__cell' aria-label={dateTime} key={dateTime}>
                     {createEvents(slots[date][time])}
                 </div>
@@ -21,6 +23,7 @@ export const Grid = ({slots}) => {
         return Object.keys(events).map((id) => {
             const event = events[id]
             const width = Object.keys(events).length
+            
             return <Event event={event} width={100/width} key={id}/>
         })
     }
