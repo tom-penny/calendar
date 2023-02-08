@@ -1,4 +1,5 @@
 import '../styles/grid.scss'
+
 import { Event } from './Event'
 
 export const Grid = () => {
@@ -10,7 +11,11 @@ export const Grid = () => {
             arr.push({})
         }
 
-        return arr.map((cell) => <div className='grid__cell'/>)
+        return arr.map((cell) => {
+            return <div className='grid__cell'>
+                <Event/>
+            </div>
+        })
     }
 
     return <div className='grid'>
