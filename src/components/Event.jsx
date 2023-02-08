@@ -19,9 +19,8 @@ export const Event = ({event, width, deleteEvent}) => {
         backgroundColor: color.current
     }
 
-    return <div className='event animate__animated.animate__fadeInRight' style={style}>
+    return <div className='event animate__animated animate__fadeInRight' style={style}>
         <CrossIcon className='event__icon' onClick={handleClick}/>
-        {/* <div className='event__container'> */}
-            <div className='event__text'>{event.name}</div>
+        <div className='event__text'>{event.name}</div>
     </div>
 }
