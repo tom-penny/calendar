@@ -10,11 +10,7 @@ export const Grid = () => {
             arr.push({})
         }
 
-        return arr.map((cell) => {
-            return <div className='grid__cell'>
-                <Event/>
-            </div>
-        })
+        return arr.map((cell) => <div className='grid__cell'/>)
     }
 
     return <div className='grid'>
