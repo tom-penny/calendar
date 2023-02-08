@@ -2,19 +2,29 @@ import '../styles/grid.scss'
 
 import { Event } from './Event'
 
-export const Grid = () => {
+export const Grid = ({slots, deleteEvent}) => {
     
-    const createCells = () => {
+    const createCells = () =>
+    {
+        return Object.keys(slots).map((date) => {
 
-        const arr = []
-        for (let i = 0; i < 45; i++) {
-            arr.push({})
-        }
+            return Object.keys(slots[date]).map((time) => {
+                const dateTime = `${date} ${time}`
 
-        return arr.map((cell) => {
-            return <div className='grid__cell'>
-                <Event/>
-            </div>
+                return <div className='grid__cell' aria-label={dateTime} key={dateTime}>
+                    {createEvents(slots[date][time])}
+                </div>
+            })
+        })
+    }
+
+    const createEvents = (events) =>
+    {
+        return Object.keys(events).map((id) => {
+            const event = events[id]
+            const width = Object.keys(events).length
+
+            return <Event event={event} width={100/width} deleteEvent={deleteEvent} key={id}/>
         })
     }
 

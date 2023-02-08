@@ -2,12 +2,14 @@ import '../styles/form.scss'
 
 import { useState } from "react"
 
-export const Form = () => {
+export const Form = ({addEvent}) => {
 
     const [event, setEvent] = useState({name: "", date: "Monday", time: "09:00"})
 
     // Event handler for form submission
     const handleSubmit = (e) => {
+        e.preventDefault()
+        addEvent(event)
     }
 
     // Event handler for form changes
