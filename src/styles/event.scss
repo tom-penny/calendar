@@ -31,3 +31,7 @@
         text-overflow: ellipsis;
     }
 }
+
+.animate__animated.animate__fadeInRight {
+    --animate-duration: 1s;
+}

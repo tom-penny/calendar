@@ -1,7 +1,7 @@
 import '../styles/event.scss'
 
-import { useRef } from 'react'
 import { RxCross2 as CrossIcon } from 'react-icons/rx'
+import { useRef } from 'react'
 
 const colors = ["#FF6961", "#FFB480", "#F8F38D", "#42D6A4", "#08CAD1", "#59ADF6", "#9D94FF", "#C780E8"]
 
@@ -18,8 +18,8 @@ export const Event = ({event, width}) => {
         backgroundColor: color.current
     }
 
-    return <div className='event' style={style}>
+    return <div className='event animate__animated.animate__fadeInRight' style={style}>
         <CrossIcon className='event__icon' onClick={handleClick}/>
-        <div className='event__text'>{event.name}</div>
+        {/* <div className='event__text'>{event.name}</div> */}
     </div>
 }
