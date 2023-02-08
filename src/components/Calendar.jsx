@@ -40,8 +40,18 @@ export const Calendar = () => {
         })
     }
 
+    const deleteEvent = (event) => {
+        const {date, time, id} = event
+
+        setSlots((slots) => {
+            const temp = {...slots}
+            delete temp[date][time][id]
+            return temp
+        })
+    }
+
     return <div className='calendar'>
-        <Grid slots={slots}/>
+        <Grid slots={slots} deleteEvent={deleteEvent}/>
         <Form addEvent={addEvent}/>
     </div>
 }

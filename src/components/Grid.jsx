@@ -2,7 +2,7 @@ import '../styles/grid.scss'
 
 import { Event } from './Event'
 
-export const Grid = ({slots}) => {
+export const Grid = ({slots, deleteEvent}) => {
     
     const createCells = () =>
     {
@@ -23,8 +23,8 @@ export const Grid = ({slots}) => {
         return Object.keys(events).map((id) => {
             const event = events[id]
             const width = Object.keys(events).length
-            
-            return <Event event={event} width={100/width} key={id}/>
+
+            return <Event event={event} width={100/width} deleteEvent={deleteEvent} key={id}/>
         })
     }
 
