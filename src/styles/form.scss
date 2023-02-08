@@ -1,0 +1,64 @@
+.form {
+    height: 15%;
+    max-width: 350px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &__input {
+        width: 100%;
+        padding: 5px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid lightgray;
+
+        &:focus {
+            border-bottom: 2px solid #59ADF6;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        &__select {
+            width: 100px;
+            appearance: none;
+            text-align: center;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+
+            &:focus {
+                outline-color: #59ADF6;
+                border-color: #59ADF6;
+            }
+
+            &:hover {
+                filter: brightness(0.95)
+            }
+        }
+    
+        &__btn {
+            width: 100px;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #59ADF6;
+            color:white;
+            font-weight: 500;
+            
+            &:focus {
+                outline-color: #59ADF6;
+            }
+
+            &:hover {
+                filter: brightness(0.95)
+            }
+        }
+    }
+}
