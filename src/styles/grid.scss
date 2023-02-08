@@ -1,0 +1,45 @@
+.grid {
+    height: 85%;
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-auto-flow: column;
+    border-bottom: 1px solid lightgray;
+
+    &__cell {
+        display: flex;
+        border-right: 1px solid lightgray;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color:black;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    &__col-header {
+        display: flex;
+        border-right: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color:black;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    &__row-header {
+        display: flex;
+        border-right: 1px solid lightgray;
+        align-items: start;
+        text-align: center;
+        justify-content: center;
+        color:black;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
