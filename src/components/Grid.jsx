@@ -4,6 +4,7 @@ import { Event } from './Event'
 
 export const Grid = ({slots, deleteEvent}) => {
     
+    // Initialise cell for each timeslot
     const createCells = () =>
     {
         return Object.keys(slots).map((date) => {
@@ -18,6 +19,7 @@ export const Grid = ({slots, deleteEvent}) => {
         })
     }
 
+    // Initialise events for each timeslot 
     const createEvents = (events) =>
     {
         return Object.keys(events).map((id) => {
