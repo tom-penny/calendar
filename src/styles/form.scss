@@ -6,10 +6,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    font-weight: 500;
 
     &__input {
         width: 100%;
         padding: 5px;
+        font-size: 1.1rem;
         border: none;
         outline: none;
         border-bottom: 1px solid lightgray;
@@ -23,7 +25,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-
+        
         &__select {
             width: 100px;
             appearance: none;
@@ -32,6 +34,8 @@
             padding: 10px;
             border-radius: 5px;
             background-color: whitesmoke;
+            font-weight: inherit;
+            color: #6d6d6d;
 
             &:focus {
                 outline-color: #59ADF6;
@@ -50,7 +54,7 @@
             border-radius: 5px;
             background-color: #59ADF6;
             color:white;
-            font-weight: 500;
+            font-weight: inherit;
             
             &:focus {
                 outline-color: #59ADF6;
